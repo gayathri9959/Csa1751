@@ -13,3 +13,11 @@ BFS(G, start)
             if neighbour not in VISITED then
                 add neighbour to VISITED
                 enqueue neighbour into Q
+                
+DFS(v):
+    mark v visited
+    print v
+    for each adjacent u of v
+        if u not visited
+            DFS(u)
+
