@@ -109,6 +109,23 @@ else if outlook = "Overcast" then
 
 else if outlook = "Rain" then
     return "Yes"
-            
+ FEED_FORWARD_NEURAL_NETWORK(X, W1, b1, W2, b2)
+
+apply input X to the network
+
+calculate hidden layer input:
+    hidden_input ← X × W1 + b1
+
+apply activation function:
+    hidden_output ← sigmoid(hidden_input)
+
+calculate output layer input:
+    final_input ← hidden_output × W2 + b2
+
+apply activation function:
+    final_output ← sigmoid(final_input)
+
+return final_output
+           
             
 
