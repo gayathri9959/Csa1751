@@ -147,6 +147,28 @@ for each turn from 0 to 8 do
 
 display board
 print Draw
+UNIFORM_COST_SEARCH(G, start, goal)
+
+create empty set VISITED
+create priority queue PQ
+
+insert (0, start) into PQ      // cost, node
+
+while PQ is not empty do
+    (cost, node) ← remove node with lowest cost from PQ
+
+    if node is in VISITED then
+        continue
+    add node to VISITED
+
+    if node = goal then
+        return cost
+
+    for each neighbour with edge cost in G[node] do
+        if neighbour not in VISITED then
+            insert (cost + edge_cost, neighbour) into PQ
+
+return NO SOLUTION
            
             
 
