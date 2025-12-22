@@ -191,6 +191,38 @@ while PQ is not empty do
             insert (H[neighbour], neighbour) into PQ
 
 return FAILURE
+MINIMAX(node, depth, maximizingPlayer)
+
+if depth = 0 OR node is terminal then
+    return evaluation of node
+
+if maximizingPlayer then
+    best ← −∞
+    for each child of node do
+        value ← MINIMAX(child, depth−1, FALSE)
+        best ← max(best, value)
+    return best
+
+else
+    best ← +∞
+    for each child of node do
+        value ← MINIMAX(child, depth−1, TRUE)
+        best ← min(best, value)
+    return best
+CRYPTARITHMETIC(words, result)
+
+extract all unique letters
+assign each letter a unique digit (0–9)
+
+for each possible digit assignment do
+    if leading letter has value 0 then
+        continue
+
+    convert words and result to numbers
+    if sum of word values = result value then
+        return valid assignment
+
+return NO SOLUTION
            
             
 
