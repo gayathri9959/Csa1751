@@ -126,6 +126,27 @@ apply activation function:
     final_output ← sigmoid(final_input)
 
 return final_output
+TIC_TAC_TOE()
+
+initialize board with 9 empty positions
+
+for each turn from 0 to 8 do
+    display the board
+    if turn is even then
+        player ← 'X'
+    else
+        player ← 'O'
+
+    read position from player
+    place player mark at position
+
+    if WIN(player) then
+        display board
+        print player wins
+        stop game
+
+display board
+print Draw
            
             
 
