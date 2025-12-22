@@ -96,6 +96,19 @@ while Q is not empty do
     enqueue (a + pour, b − pour)      // jug2 → jug1
 
 return NO SOLUTION
+DECISION_TREE(outlook, humidity)
+
+if outlook = "Sunny" then
+    if humidity = "High" then
+        return "No"
+    else
+        return "Yes"
+
+else if outlook = "Overcast" then
+    return "Yes"
+
+else if outlook = "Rain" then
+    return "Yes"
             
             
 
