@@ -169,6 +169,28 @@ while PQ is not empty do
             insert (cost + edge_cost, neighbour) into PQ
 
 return NO SOLUTION
+GREEDY_BEST_FIRST_SEARCH(G, H, start, goal)
+
+create empty set VISITED
+create priority queue PQ
+
+insert (H[start], start) into PQ      // heuristic, node
+
+while PQ is not empty do
+    (h, node) ← remove node with lowest heuristic from PQ
+
+    if node is in VISITED then
+        continue
+    add node to VISITED
+
+    if node = goal then
+        return SUCCESS
+
+    for each neighbour in G[node] do
+        if neighbour not in VISITED then
+            insert (H[neighbour], neighbour) into PQ
+
+return FAILURE
            
             
 
